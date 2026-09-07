@@ -3,13 +3,12 @@ using namespace std;
     class point{
         private:
             int x,y;
-
             public:
             //list initialisation
-                point() : x{0},y{0} { //default constructor
-                    cout<<"default constructor"<<endl;
-                }
-                point(int p,int q) : x{p},y{q} { //parameterized constructor
+                // point() : x{0},y{0} { //default constructor
+                //     cout<<"default constructor"<<endl;
+                // }
+                point(int p=0,int q=0) : x{p},y{q} { //parameterized constructor
                     cout<<"parameterized constructor"<<endl;
                 }
                     point add(point p) {
@@ -23,10 +22,9 @@ using namespace std;
                 }
     };
     int main(){
-        point p(5,10) ,q(20,50);
-        p.show();
-        q.show();
-        point r=p.add(q);
-        r.show();
+       point p, q(20,50);
+       point r=q;
+       r.show();
+       q.show();
         return 0;
     }
